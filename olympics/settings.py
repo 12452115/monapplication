@@ -30,6 +30,7 @@ ALLOWED_HOSTS = ['appd-0054414afc83.herokuapp.com']
 
 
 
+
 # Application definition
 
 INSTALLED_APPS = [
