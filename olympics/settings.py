@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -75,16 +76,9 @@ WSGI_APPLICATION = 'olympics.wsgi.application'
 
 
 # Database
-# https://docs.djangoproject.com/en/5.0/ref/settings/#databases
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'site',        # Nom de la base de données
-        'USER': 'olympicsite2',       # Utilisateur PostgreSQL
-        'PASSWORD': 'khameslynda',      # Mot de passe de l'utilisateur PostgreSQL
-        'HOST': 'localhost',             # Où est hébergé PostgreSQL (habituellement localhost)
-        'PORT': '5433',                  # Port par défaut de PostgreSQL
-    }
+    'default': dj_database_url.config(default='postgres://localhost')
 }
 
 
