@@ -13,10 +13,6 @@ env/
 # Fichiers de log
 *.log
 
-# Dossiers de déploiement
-staticfiles/
-media/
-
 # Pytest
 .cache/
 

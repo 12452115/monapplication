@@ -6,8 +6,17 @@
     <title>Accueil - Jeux Olympiques</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <style>
+        body {
+            background-size: cover;  
+            background-position: center;  
+            background-repeat: no-repeat;  
+            color: white;  
+        }
+    </style>
 </head>
 <body>
+    <body style="background-image: url('{% static 'image/img.jpg' %}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
     <header>
         <h1>Bienvenue sur les Jeux Olympiques France</h1>
         <nav>
