@@ -16,7 +16,13 @@ class CartItem(models.Model):
     quantity = models.PositiveIntegerField(default=1)
 
     def __str__(self):
-        return f"{self.offer.name} - {self.quantity}"
+        # Accède aux propriétés de l'offre associée
+        offer_name = self.offer.name
+        offer_description = self.offer.description  # Assure-toi que 'description' existe dans ton modèle Offer
+        offer_price = self.offer.price  # Assure-toi que 'price' existe dans ton modèle Offer
+
+        # Retourne une chaîne qui inclut ces informations
+        return f"{offer_name} - {offer_description} - {offer_price}€ x {self.quantity}"
 
     class Meta:
         unique_together = ('user', 'offer')  # Assure qu'une offre peut être ajoutée une seule fois par utilisateur

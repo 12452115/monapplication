@@ -78,7 +78,16 @@ WSGI_APPLICATION = 'olympics.wsgi.application'
 
 
 # Database
-
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'site',
+        'USER': 'olympicsite2',
+        'PASSWORD': 'khameslynda',
+        'HOST': 'localhost',  # ou l'IP de votre serveur PostgreSQL
+        'PORT': '5433',
+    }
+}
 DATABASES = {
     'default': dj_database_url.config(default='postgres://localhost')
 }
