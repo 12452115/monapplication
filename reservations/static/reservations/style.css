@@ -1,4 +1,14 @@
 /* styles.css */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Hauteur de la page à 100% de la fenêtre */
+    background-image: url("{% static 'reservations/your-image.jpg' %}");
+    background-size: cover; /* Recouvre toute la page sans déformation */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Ne répète pas l'image */
+}
+
 .full-page-image {
     position: fixed; /* fixe l'image dans la fenêtre */
     top: 0;
