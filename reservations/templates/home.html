@@ -35,7 +35,7 @@
                         <h3>{{ offer.name }}</h3>
                         <p>{{ offer.description }}</p>
                         <p><strong>Prix :</strong> {{ offer.price }} €</p>
-                        <p><strong>Nombre de personnes :</strong> {{ offer.max_people }}</p>
+                        
                         
                         <!-- Vérifie si l'utilisateur est connecté avant d'autoriser l'ajout au panier -->
                         {% if user.is_authenticated %}
