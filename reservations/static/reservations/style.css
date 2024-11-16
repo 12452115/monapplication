@@ -21,7 +21,7 @@ body {
 
 
 header {
-    background-color:blue;
+    background-color:rgb(174, 174, 212);
     color: #fff;
     text-align: center;
 }
@@ -59,7 +59,7 @@ h1, h2 {
 }
 
 footer {
-    background-color: blue;
+    background-color: rgb(174, 174, 212);
     color: #fff;
     text-align: center;
     position: fixed;
