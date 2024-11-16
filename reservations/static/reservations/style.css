@@ -1,13 +1,14 @@
 /* styles.css */
-.background-image {
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    position: absolute;
+.full-page-image {
+    position: fixed; /* fixe l'image dans la fenêtre */
     top: 0;
     left: 0;
-    z-index: -1;
+    width: 100vw; /* largeur de l'image égale à 100% de la fenêtre */
+    height: 100vh; /* hauteur de l'image égale à 100% de la fenêtre */
+    object-fit: cover; /* fait en sorte que l'image couvre toute la page sans déformation */
+    z-index: -1; /* place l'image derrière le contenu */
 }
+
 
 header {
     background-color: #333;
