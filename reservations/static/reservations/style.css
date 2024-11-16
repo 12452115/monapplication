@@ -21,7 +21,7 @@ body {
 
 
 header {
-    background-color:white;
+    background-color:blue;
     color: #fff;
     text-align: center;
 }
@@ -59,7 +59,7 @@ h1, h2 {
 }
 
 footer {
-    background-color: #333;
+    background-color: blue;
     color: #fff;
     text-align: center;
     position: fixed;
