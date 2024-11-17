@@ -1,11 +1,12 @@
 /* styles.css */
+
 body {
     margin: 0;
     padding: 0;
     height: 100vh; /* Hauteur de la page à 100% de la fenêtre */
     background-image: url("{% static 'reservations/your-image.jpg' %}");
-    background-size: cover; /* Recouvre toute la page sans déformation */
-    background-position: center; /* Centre l'image */
+    background-size: cover; /* Recouvrir toute la page sans déformation */
+    background-position: center; /* Centrer l'image */
     background-repeat: no-repeat; /* Ne répète pas l'image */
 }
 
@@ -19,11 +20,11 @@ body {
     z-index: -1; /* place l'image derrière le contenu */
 }
 
-
 header {
-    background-color:rgb(174, 174, 212);
+    background-color: rgb(174, 174, 212);
     color: #fff;
     text-align: center;
+    padding: 10px;
 }
 
 h1, h2 {
@@ -34,6 +35,7 @@ h1, h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    padding: 10px;
 }
 
 .offer-item {
@@ -43,6 +45,11 @@ h1, h2 {
     padding: 20px;
     width: 300px;
     text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.offer-item:hover {
+    transform: scale(1.05);
 }
 
 .button {
@@ -52,6 +59,7 @@ h1, h2 {
     color: white;
     text-decoration: none;
     border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .button:hover {
@@ -65,4 +73,68 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+}
+
+/* ---- Media Queries ---- */
+
+/* Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+    header {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .offers-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .offer-item {
+        width: 90%; /* Réduit la largeur à 90% de l'écran */
+        margin: 5px 0;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 5px;
+    }
+}
+
+/* Tablette (max-width: 768px) */
+@media (max-width: 768px) {
+    header {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    .offer-item {
+        width: 45%; /* Affiche deux colonnes sur tablette */
+        margin: 10px 5px;
+    }
+
+    footer {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/* Desktop (min-width: 769px) */
+@media (min-width: 769px) {
+    header {
+        font-size: 20px;
+        padding: 15px;
+    }
+
+    .offers-container {
+        justify-content: space-around;
+    }
+
+    .offer-item {
+        width: 300px; /* Largeur fixe pour les éléments */
+    }
+
+    footer {
+        font-size: 16px;
+        padding: 15px;
+    }
 }
